@@ -1,0 +1,2 @@
+module MechanicalTurksHelper
+end
