@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @task.title %>(<%=@task.id%>)
+</p>
+
+<p>
+  <b>Due date:</b>
+  <%= @task.due_date %>
+</p>
+
+<p>
+  <b>List:</b>
+  <%= @task.list_id %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @task.status %>
+</p>
+
+
+<%= form_for(@task, url: delegate_task_path(@task)) do |f| %>
+  <div class="actions">
+    <%= f.submit 'Delegate' %>
+  </div>
+<% end %>
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
